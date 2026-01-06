@@ -54,11 +54,11 @@ export function RootComponent() {
               0420 919 298
             </a>
             <a
-              href="mailto:ganiautocare@gmail.com"
+              href="mailto:gccheapcarrental@gmail.com"
               className="flex items-center gap-2 hover:text-amber-400 transition-colors"
             >
               <Mail className="h-4 w-4" />
-              ganiautocare@gmail.com
+              gccheapcarrental@gmail.com
             </a>
           </div>
           <div className="flex items-center gap-2">
@@ -77,6 +77,11 @@ export function RootComponent() {
               to={createPageUrl("Home")}
               className="flex items-center gap-3"
             >
+              <img 
+                src="/logo.jpeg" 
+                alt="Logo" 
+                className="h-12 w-auto object-contain drop-shadow-sm"
+              />
               <div className="w-12 h-12 bg-linear-to-br from-amber-400 to-amber-500 rounded-xl flex items-center justify-center">
                 <Car className="h-7 w-7 text-white/90" />
               </div>
@@ -191,6 +196,11 @@ export function RootComponent() {
             {/* Brand */}
             <div className="lg:col-span-2">
               <div className="flex items-center gap-3 mb-4">
+                <img 
+                  src="/logo.jpeg" 
+                  alt="Logo" 
+                  className="h-12 w-auto object-contain drop-shadow-sm"
+                />
                 <div className="w-12 h-12 bg-linear-to-br from-amber-400 to-amber-500 rounded-xl flex items-center justify-center">
                   <Car className="h-7 w-7 text-slate-900" />
                 </div>
@@ -258,11 +268,11 @@ export function RootComponent() {
                 </li>
                 <li>
                   <a
-                    href="mailto:ganiautocare@gmail.com"
+                    href="mailto:gccheapcarrental@gmail.com"
                     className="flex items-center gap-3 text-slate-400 hover:text-amber-400 transition-colors"
                   >
                     <Mail className="h-5 w-5 text-amber-500" />
-                    ganiautocare@gmail.com
+                    gccheapcarrental@gmail.com
                   </a>
                 </li>
                 <li className="flex items-start gap-3 text-slate-400">

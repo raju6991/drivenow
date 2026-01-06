@@ -200,7 +200,7 @@ export default function CarsAvailable() {
               className="border-white text-slate-700 hover:bg-white hover:text-slate-900"
             >
               <Mail className="mr-2 h-5 w-5" />
-              ganiautocare@gmail.com
+              gccheapcarrental@gmail.com
             </Button>
           </div>
         </div>

@@ -4,11 +4,9 @@ import {
   DollarSign, 
   Shield, 
   FileCheck, 
-  Clock, 
   Car, 
   CreditCard, 
-  Heart,
-  Wrench
+  Heart
 } from 'lucide-react';
 
 const benefits = [
@@ -25,13 +23,9 @@ const benefits = [
   {
     icon: FileCheck,
     title: 'Rego Included',
-    description: 'Registration and maintenance all taken care of'
+    description: 'Registration included'
   },
-  {
-    icon: Clock,
-    title: 'No Lock-In',
-    description: 'Flexible terms without long-term commitments'
-  },
+  
   {
     icon: Car,
     title: 'Uber Eats Ready',
@@ -42,11 +36,7 @@ const benefits = [
     title: 'Easy Payments',
     description: 'Convenient weekly or fortnightly payment options'
   },
-  {
-    icon: Wrench,
-    title: 'Free Servicing',
-    description: 'Regular maintenance handled by qualified mechanics'
-  },
+  
   {
     icon: Heart,
     title: 'Friendly Service',
@@ -73,7 +63,7 @@ export default function BenefitsSection() {
           </p>
         </motion.div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {benefits.map((benefit, index) => (
             <motion.div
               key={index}

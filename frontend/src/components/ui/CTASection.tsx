@@ -76,7 +76,7 @@ export default function CTASection() {
                 <Mail className="h-8 w-8 text-white" />
               </div>
               <h3 className="font-semibold text-lg mb-2">Email Us</h3>
-              <p className="text-white/80">info@goldcoastcars.com.au</p>
+              <p className="text-white/80">gccheapcarrental@gmail.com</p>
             </motion.div>
             
             <motion.div
