@@ -1,24 +1,25 @@
 const express = require("express");
 const db = require("./db");
-const nodemailer = require("nodemailer");
 
 // Load environment variables
-require('dotenv').config();
+require("dotenv").config();
 
 const app = express();
 app.use(express.json());
 
 const cors = require("cors");
-app.use(cors({
-	origin: ["https://gccheapcarrental.com", "http://localhost:5173"], // allow production and development frontend
-	methods: ["GET", "POST", "PUT", "DELETE"]
-}));
+app.use(
+	cors({
+		origin: ["https://gccheapcarrental.com", "http://localhost:5173"], // allow production and development frontend
+		methods: ["GET", "POST", "PUT", "DELETE"],
+	}),
+);
 
-app.get("/", (req, res) => {
+app.get("/", (_req, res) => {
 	res.send("Node Works");
 });
 
-app.get("/api/cars", (req, res) => {
+app.get("/api/cars", (_req, res) => {
 	db.all("SELECT * FROM cars", [], (err, rows) => {
 		if (err) return res.status(500).json({ error: err.message });
 		console.log("Returning rows:", rows.length);
@@ -27,7 +28,8 @@ app.get("/api/cars", (req, res) => {
 });
 
 app.post("/api/enquiries", (req, res) => {
-	const { name, phone, email, rental_duration, vehicle_interest, message } = req.body;
+	const { name, phone, email, rental_duration, vehicle_interest, message } =
+		req.body;
 
 	// Validate required fields
 	if (!name || !phone) {
@@ -38,10 +40,10 @@ app.post("/api/enquiries", (req, res) => {
 	console.log("New Enquiry Received:");
 	console.log("Name:", name);
 	console.log("Phone:", phone);
-	console.log("Email:", email || 'Not provided');
-	console.log("Rental Duration:", rental_duration || 'Not specified');
-	console.log("Vehicle Interest:", vehicle_interest || 'Not specified');
-	console.log("Message:", message || 'Not provided');
+	console.log("Email:", email || "Not provided");
+	console.log("Rental Duration:", rental_duration || "Not specified");
+	console.log("Vehicle Interest:", vehicle_interest || "Not specified");
+	console.log("Message:", message || "Not provided");
 	console.log("---");
 
 	// For now, just return success without email
